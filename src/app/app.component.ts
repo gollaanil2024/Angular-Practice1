@@ -7,6 +7,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CardsComponent } from './components/cards/cards.component';
+import { FormGroup, FormBuilder } from "@angular/forms";
 
 @Component({
   selector: 'app-root',

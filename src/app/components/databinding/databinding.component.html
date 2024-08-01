@@ -1,0 +1,75 @@
+<div class="container">
+  
+    <div class="row mt-3">
+        <h4 class="text-center">TASK:1 Have a paragraph & a toggle button, on click of the button control the visibility(Show/Hide) of the paragraph</h4>
+        <div class="col">
+            <p [hidden]="flag">Sample Paragraph </p>
+            <button class="btn-primary btn ms-3" (click)="showhideparagraph()">Show/Hide</button>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <h4 class="text-center">TASK:2 Create a text-area with maxLength=100, as the user keeps typing display updated Remaining characters.</h4>
+        <div class="col">
+            <textarea  [(ngModel)]="Nofcharacters"> </textarea>
+          <label class="nopadding clrlbl"> Characters Remaining: {{100-Nofcharacters.length}}</label >
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <h4 class="text-center">TASK:3 Create dropdown with state names, when user changes dropdown value, print the selected dropdown value in a paragraph</h4>
+        <div class="col">
+                <select [(ngModel)]="selectedstate">
+                    <option>Andhra</option>
+                    <option>Kerala</option>
+                    <option>Tamilnadu</option>
+                </select>
+                <p>Your selected State : {{ selectedstate }}</p>
+       </div>
+    </div>
+
+    <div class="row mt-3">
+        <h4 class="text-center">TASK:4 have 2 inputBoxes, and a dropdown(+,-,*,/) and perform arithmetic operations</h4>
+        <div class="col">
+            <input type="number"  [(ngModel)] ="Input1"/>
+            <input type="number" class="ms-3"  [(ngModel)] ="Input2"/>
+                <select [(ngModel)]="Operator" class="ms-3">
+                    <option>*</option>
+                    <option>+</option>
+                    <option>-</option>
+                </select>
+                <p>Results : {{calculate()}}</p>
+       </div>
+    </div>
+
+    <div class="row mt-3">
+        <h4 class="text-center">TASK:5  Create a input box, toggle the type of that input box to (text/password)</h4>
+        <div class="col">
+            <input [type]="show ? 'text' : 'password'" />
+            <button class="btn-primary btn ms-3" (click)="password()">{{show ? 'Hide' : 'Show'}}</button>
+        </div>
+    </div>
+
+    <!-- <div class="row mt-3">
+        <h4 class="text-center">TASK:6  Impement dark/light mode</h4>
+        <div class="col">
+            <input [type]="show ? 'text' : 'password'" />
+            <button class="btn-primary btn ms-3" (click)="password()">{{show ? 'Hide' : 'Show'}}</button>
+        </div>
+    </div> -->
+
+
+
+    <!-- <div class="row mt-3">
+        <h4 class="text-center">TASK:7  create a counter example with 3 controls(increment,decrement,reset)</h4>
+        <div class="col">
+            <input type="number"   (click)="Updatetimer()"/>
+            <input type="number"   (click)="Updatetimer()"/>
+            <input type="number"   (click)="Updatetimer()"/>
+            <p>Counter : {{Updatetimer()}}</p>
+       </div>
+        </div>
+    </div> -->
+
+    
+</div>

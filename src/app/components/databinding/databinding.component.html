@@ -50,26 +50,20 @@
         </div>
     </div>
 
-    <!-- <div class="row mt-3">
+    <div class="row mt-3">
         <h4 class="text-center">TASK:6  Impement dark/light mode</h4>
-        <div class="col">
-            <input [type]="show ? 'text' : 'password'" />
-            <button class="btn-primary btn ms-3" (click)="password()">{{show ? 'Hide' : 'Show'}}</button>
+        <div class="col">   
+            <button class="btn-primary btn ms-3" (click)="toggleMode()">{{!mode?'DARK':'LIGHT'}}</button>
         </div>
-    </div> -->
+    </div>
 
-
-
-    <!-- <div class="row mt-3">
+    <div class="row mt-3">
         <h4 class="text-center">TASK:7  create a counter example with 3 controls(increment,decrement,reset)</h4>
-        <div class="col">
-            <input type="number"   (click)="Updatetimer()"/>
-            <input type="number"   (click)="Updatetimer()"/>
-            <input type="number"   (click)="Updatetimer()"/>
-            <p>Counter : {{Updatetimer()}}</p>
-       </div>
-        </div>
-    </div> -->
-
-    
+        <div class="col"> 
+            <button  class="btn-primary btn ms-3" (click)="increment()">+</button>          
+            <button class="btn-primary btn ms-3" (click)="decrement()">-</button>
+            <p>Results : {{counterValue}}</p>
+            
+        </div>   
+    </div>
 </div>

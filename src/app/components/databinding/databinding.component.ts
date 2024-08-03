@@ -16,11 +16,15 @@ export class DatabindingComponent {
   Input1=0;
   Input2=0;
   Operator= '';
+  mode=false
+  counterValue = 0;
 
-  showhideparagraph() {
+  showhideparagraph() 
+  {
     this.flag = !this.flag;
   }
-   password() {
+   password() 
+   {
     this.show = !this.show;
   };
 
@@ -36,9 +40,21 @@ export class DatabindingComponent {
     return 0;
   };
 
-  // Updatetimer()
-  // {
-  // }
+  toggleMode() {
+    this.mode = !this.mode;
+    if (this.mode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  };
+  
+  increment() {
+    this.counterValue++;
+  }
+  decrement() {
+    this.counterValue--;
+  }
 
 }
  

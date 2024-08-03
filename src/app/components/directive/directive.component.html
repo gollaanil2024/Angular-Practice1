@@ -1,0 +1,65 @@
+<button class="btn-primary btn mt-3" (click)="toggleMode()">Toggle</button>
+
+<div class="row hide" id="emptblformat" >
+    <table  class="table table-striped table-hover" >
+        <thead>
+            <tr>
+             <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Email</th>
+              <th scope="col">Address</th>
+              <th scope="col">phone</th>
+              <th scope="col">website</th>           
+            </tr>
+          </thead>
+        @for (Emp of Employee; track Emp.id) 
+            {    
+                <tr>
+                    <th scope="row">{{ Emp.id }} </th>
+                    <td>
+                        {{ Emp.name }} 
+                    </td>
+                    <td>
+                        {{ Emp.email }} 
+                    </td>
+                    <td>
+                        {{ Emp.address.street}} ,{{ Emp.address.suite}}, {{ Emp.address.city}},{{ Emp.address.zipcode}}
+                    </td>
+                    <td>
+                        {{ Emp.phone }} 
+                    </td>
+                  
+                    <td>
+                        {{ Emp.website }} 
+                    </td>
+                    
+                </tr>
+            }
+    </table>
+</div>
+
+
+<br/>
+<div class="row hide" id="empcardsformat" >
+    <!-- <h2>Cards</h2> -->
+    @for (Emp of Employee; track Emp.id) 
+    { 
+    <div class="col-sm-3 mb-3 mb-sm-0 mt-3">
+      <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">  {{ Emp.name }} </h5>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ Emp.email }} </h6>
+            <h6 class="card-subtitle mb-2 text-body-secondary">{{ Emp.phone }} </h6>
+            <p class="card-text">{{ Emp.address.street}} ,{{ Emp.address.suite}}, {{ Emp.address.city}},{{ Emp.address.zipcode}}</p>
+            <a href={{Emp.website}}  target="_blank" class="card-link">Website</a>
+           
+          </div>
+        </div>
+    </div>
+    }
+</div>
+
+
+
+
+

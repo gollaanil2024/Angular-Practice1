@@ -1,0 +1,45 @@
+
+
+<button class="btn-primary btn mt-3 btn-info " data-bs-toggle="modal"  data-bs-target="#AddEmployeemodel">Add Employee </button>
+  <!-- Modal -->
+  <div class="modal fade" id="AddEmployeemodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Employee Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <div class="row  align-items-center mb-3">
+              <div class="col-auto">
+                  <label for="disabledTextInput" class="form-label">Name</label>
+              </div>
+              <div class="col-auto">
+                  <input type="text" [(ngModel)]="Name" name="Name" value=" " class="form-control" placeholder="Enter Name"  >
+              </div>
+          </div>
+          <div class="row  align-items-center mb-3">
+              <div class="col-auto">
+                  <label for="disabledTextInput" class="form-label">Email</label>
+              </div>
+              <div class="col-auto">               
+                  <input type="text" [(ngModel)]="Email" name="email" value=" " class="form-control" placeholder="Enter Email"  >
+              </div>
+          </div>
+          <div class="row g-3 align-items-center">
+              <div class="col-auto">
+                  <label for="disabledTextInput" class="form-label">Phone</label>
+              </div>
+              <div class="col-auto">                
+                  <input type="text" [(ngModel)]="Phone" name="Phone" value=" " class="form-control" placeholder="Enter Phone"  >                   
+              </div>
+
+          </div>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-primary"  (click)="AddEmployee()">Add Employee</button>
+          <button type="button" class="btn btn-secondary" #ModalClose  data-bs-dismiss="modal">Close</button>
+    
+      </div>
+    </div>
+</div> 

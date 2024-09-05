@@ -3,12 +3,13 @@ import * as data from './products.json';
 import { CommonModule } from '@angular/common';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [CommonModule,NgxPaginationModule,FormsModule],
+  imports: [CommonModule,NgxPaginationModule,FormsModule,RouterLink],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })

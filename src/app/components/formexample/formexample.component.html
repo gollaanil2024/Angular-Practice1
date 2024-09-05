@@ -1,0 +1,48 @@
+<div class="container">
+    <h2 class="heading">Template Driven Form</h2>
+    <form #userForm="ngForm" (ngSubmit)="submitForm(userForm)">
+      <div class="form-group mt-4">
+        <label for="name">Name</label>
+        <input type="text" class="form-control bi bi-asterisk" id="name" name="Name" [(ngModel)]="userDetails.Name" required minlength="5">
+         <!--<div *ngIf="userForm.controls['Name'].errors?.['required']" && name.dirty class="text-danger" >Name is required.</div>
+        <div *ngIf="userForm.controls['Name'].errors?.['minlength']" class="text-danger">
+            Name must be at least 5 characters long.
+          </div>       -->
+      </div>
+       <div class="form-group mt-4">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="Email" [(ngModel)]="userDetails.email"  email>
+        <div *ngIf="userForm.controls['email']?.touched && userForm.controls['email']?.invalid"  class="text-danger">
+          Please enter a valid email address.
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <label for="mobile">Mobile Number</label>
+        <input type="number" class="form-control" id="mobile" name="Mobile" [(ngModel)]="userDetails.mobile"  pattern="[0-9]{10}" [maxLength]="10">
+        <div *ngIf="userForm.controls['mobile']?.touched && userForm.controls['mobile']?.invalid"   class="text-danger">
+          Please enter a valid mobile number.
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <label for="gender">Gender</label>
+        <select class="form-control" id="gender" name="Gender" [(ngModel)]="userDetails.gender" required>
+          <option value="" disabled>Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+        <div *ngIf="userForm.controls['gender']?.touched && userForm.controls['gender']?.invalid" class="text-danger">
+          Please select a gender.
+        </div>
+      </div>
+      <div class="form-group mt-4">
+        <textarea class="form-control " id="Comments" name="Comments" [(ngModel)]="userDetails.Comments" placeholder="" required [maxLength]="250"></textarea>
+      </div>
+      <div class="form-group mt-4">
+      <input type="checkbox" class="form-check-input"  id="acceptTerms" name="AcceptTerms" [(ngModel)]="userDetails.Acceptterms" required>
+     </div>
+      <div class="mt-4">{{ userForm.value| json }}</div>
+      <button type="submit" [disabled]="!userForm.valid" class="btn btn-primary mt-4">Submit</button>
+       
+    </form>
+  </div>

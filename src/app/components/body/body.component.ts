@@ -7,11 +7,22 @@ import { PipesComponent } from '../pipes/pipes.component';
 import { ParentComponent } from '../parent/parent.component';
 import { EmployeecrudComponent } from '../employeecrud/employeecrud.component';
 import { EmployeeComponent } from '../employee/employee.component';
+import { FormexampleComponent } from '../formexample/formexample.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [DatabindingComponent, DirectiveComponent,CommonModule,ProductsComponent,PipesComponent,ParentComponent,EmployeecrudComponent,EmployeeComponent],
+  imports: [DatabindingComponent
+            , DirectiveComponent
+            ,CommonModule
+            ,ProductsComponent
+            ,PipesComponent
+            ,ParentComponent
+            ,EmployeecrudComponent
+            ,EmployeeComponent
+            ,FormexampleComponent
+          ,RouterModule],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })

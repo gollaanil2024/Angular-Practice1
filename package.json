@@ -21,6 +21,7 @@
     "@angular/platform-server": "^18.1.0",
     "@angular/router": "^18.1.0",
     "@angular/ssr": "^18.1.2",
+    "@ngrx/store": "^18.0.2",
     "@sweetalert2/themes": "^5.0.17",
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",

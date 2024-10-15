@@ -9,23 +9,25 @@ import { EmployeecrudComponent } from '../employeecrud/employeecrud.component';
 import { EmployeeComponent } from '../employee/employee.component';
 import { FormexampleComponent } from '../formexample/formexample.component';
 import { RouterModule } from '@angular/router';
+import { CounterComponent } from "../counter/counter.component";
 
 @Component({
   selector: 'app-body',
   standalone: true,
-  imports: [DatabindingComponent
-            , DirectiveComponent
-            ,CommonModule
-            ,ProductsComponent
-            ,PipesComponent
-            ,ParentComponent
-            ,EmployeecrudComponent
-            ,EmployeeComponent
-            ,FormexampleComponent
-          ,RouterModule],
+  imports: [DatabindingComponent,
+    DirectiveComponent,
+    CommonModule,
+    ProductsComponent,
+    PipesComponent,
+    ParentComponent,
+    EmployeecrudComponent,
+    EmployeeComponent,
+    FormexampleComponent,
+    RouterModule, CounterComponent
+  ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
 })
 export class BodyComponent {
-
+  
 }

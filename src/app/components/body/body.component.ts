@@ -10,6 +10,7 @@ import { EmployeeComponent } from '../employee/employee.component';
 import { FormexampleComponent } from '../formexample/formexample.component';
 import { RouterModule } from '@angular/router';
 import { CounterComponent } from "../counter/counter.component";
+import { MaterialcomponentsComponent } from '../materialcomponents/materialcomponents.component';
 
 @Component({
   selector: 'app-body',
@@ -23,7 +24,8 @@ import { CounterComponent } from "../counter/counter.component";
     EmployeecrudComponent,
     EmployeeComponent,
     FormexampleComponent,
-    RouterModule, CounterComponent
+    RouterModule, CounterComponent,
+    MaterialcomponentsComponent
   ],
   templateUrl: './body.component.html',
   styleUrl: './body.component.css'
